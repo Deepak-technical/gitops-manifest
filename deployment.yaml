@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: tetris
+  name: react
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: tetris
+      app: react
   template:
     metadata:
       labels:
-        app: tetris
+        app: react
     spec:
       containers:
-      - name: tetris
+      - name: react
         image: sevenajay/tetrisv2:latest
         ports:
         - containerPort: 80   # Use port 3000
@@ -22,10 +22,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: tetris-service
+  name: react-service
 spec:
   selector:
-    app: tetris
+    app: react
   ports:
   - protocol: TCP
     port: 80                 # Expose port 80
