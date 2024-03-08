@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: react
-        image: deepakprasad/gitops-demo-app-2:6
+        image: deepakprasad/gitops-demo-app-2:7
         ports:
         - containerPort: 80   # Use port 3000
 
